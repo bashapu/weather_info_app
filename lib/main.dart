@@ -57,22 +57,24 @@ class _WeatherScreenState extends State<WeatherScreen> {
             ),
             SizedBox(height: 20),
             ElevatedButton(
-              onPressed: null,
+              onPressed: fetchWeather,
               child: Text('Fetch Weather'),
             ),
             SizedBox(height: 20),
-            Text(
-              'City: $_cityName',
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-            ),
-            Text(
-              'Temperature: $_temperature',
-              style: TextStyle(fontSize: 18),
-            ),
-            Text(
-              'Weather: $_weatherCondition',
-              style: TextStyle(fontSize: 18),
-            ),
+            if (_cityName.isNotEmpty) ...[
+              Text(
+                'City: $_cityName',
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
+              Text(
+                'Temperature: $_temperature',
+                style: TextStyle(fontSize: 18),
+              ),
+              Text(
+                'Weather: $_weatherCondition',
+                style: TextStyle(fontSize: 18),
+              ),
+            ],
           ],
         ),
       ),
