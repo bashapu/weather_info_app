@@ -32,7 +32,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
     setState(() {
       _cityName = _cityController.text;
       // Dummy data
-      _temperature = '25Â°C';
+      _temperature = '25°C';
       _weatherCondition = 'Sunny';
     });
   }
